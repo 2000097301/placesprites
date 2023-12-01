@@ -57,6 +57,9 @@ function Create_Human () {
     human.setPosition(20, 30)
     human.say("Hello!")
 }
+sprites.onDestroyed(SpriteKind.Human, function (sprite) {
+    music.play(music.stringPlayable("D - B F G F E C ", 230), music.PlaybackMode.UntilDone)
+})
 let human: Sprite = null
 let asteroid: Sprite = null
 let cow: Sprite = null

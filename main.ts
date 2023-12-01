@@ -25,6 +25,12 @@ function Birth_Cow () {
     cow.setPosition(50, 80)
     cow.say("Moo")
 }
+function move_cow () {
+    cow.setPosition(133, 96)
+}
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    move_cow()
+})
 function Crash_Astroid () {
     asteroid = sprites.createProjectile(sprites.space.spaceAsteroid0, -10, 10, SpriteKind.Asteroid)
     asteroid.say("Crash")
